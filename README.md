@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/sdruskat/pykwalifire.svg?branch=master)](https://travis-ci.org/sdruskat/pykwalifire) [![Coverage Status](https://coveralls.io/repos/github/sdruskat/pykwalifire/badge.svg?branch=master)](https://coveralls.io/github/sdruskat/pykwalifire?branch=master)
 
-# :snake: pykwalifire :fire:
+# pykwalifire
 
 **pykwalifire** is a fork of the YAML/JSON validation library [pykwalify](https://github.com/Grokzen/pykwalify).
 It adds the following features.
@@ -20,6 +20,16 @@ validate JSON files such as *my-json-file.jext*.
 ## History
 
 Cf. [pykwalify](https://github.com/Grokzen/pykwalify).
+
+# Installation
+
+*pykwalifire* is available from PyPI: https://pypi.python.org/pypi/pykwalifire.
+
+Install it with 
+
+```bash
+pip install pykwalifire
+```
 
 # Basic usage
 
@@ -62,7 +72,7 @@ For further documentation, please see the [pykwalify documentation](http://pykwa
 
 # `pykwalify` branch
 
-The [`pykwalify` branch](https://github.com/sdruskat/pykwalifire/tree/pykwalify)
+The [pykwalify branch](https://github.com/sdruskat/pykwalifire/tree/pykwalify)
 is used to create pull requests against the [upstream repository](https://github.com/Grokzen/pykwalify).
 Hopefully this way all work that's been done in *pykwalifire* can be contributed
 back to the original project.

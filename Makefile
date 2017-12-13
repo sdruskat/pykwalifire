@@ -42,7 +42,9 @@ test:
 	coverage html
 
 sdist:
-	python setup.py sdist
+	pandoc README.md -o README.rst
+	python setup.py check -r -s
+	python setup.py sdist bdist_wheel
 
 install:
 	python setup.py install
