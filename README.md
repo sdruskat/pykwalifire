@@ -17,7 +17,7 @@ validate JSON files such as *my-json-file.jext*.
 
 ## History
 
-[pykwalify](https://github.com/Grokzen/pykwalify).
+Cf. [pykwalify](https://github.com/Grokzen/pykwalify).
 
 # Basic usage
 
