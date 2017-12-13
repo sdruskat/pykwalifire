@@ -10,23 +10,23 @@ with open(os.path.join('docs', 'release-notes.rst')) as f:
     history = f.read()
 
 setup(
-    name="pykwalify",
+    name="pykwalifire",
     version="1.6.0",
     description='Python lib/cli for JSON/YAML schema validation',
     long_description=readme + '\n\n' + history,
-    author="Johan Andersson",
-    author_email="Grokzen@gmail.com",
-    maintainer='Johan Andersson',
-    maintainer_email='Grokzen@gmail.com',
+    author="Stephan Druskat",
+    author_email="mail@sdruskat.net",
+    maintainer='Stephan Druskat',
+    maintainer_email='mail@sdruskat.net',
     license='MIT',
     packages=['pykwalify'],
-    url='http://github.com/grokzen/pykwalify',
+    url='http://github.com/sdruskat/pykwalifire',
     extras_require={
         'ruamel': ["ruamel.yaml>=0.11.0,<0.12.0"],
     },
     entry_points={
         'console_scripts': [
-            'pykwalify = pykwalify.cli:cli_entrypoint',
+            'pykwalifire = pykwalify.cli:cli_entrypoint',
         ],
     },
     install_requires=[
@@ -36,13 +36,13 @@ setup(
     ],
     classifiers=(
         # 'Development Status :: 1 - Planning',
-        # 'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 2 - Pre-Alpha',
         # 'Development Status :: 3 - Alpha',
         # 'Development Status :: 4 - Beta',
-        'Development Status :: 5 - Production/Stable',
+        # 'Development Status :: 5 - Production/Stable',
         # 'Development Status :: 6 - Mature',
         # 'Development Status :: 7 - Inactive',
-        'Intended Audience :: Developers',
+        'Intended Audience :: Science/Research',
         'Operating System :: OS Independent',
         'License :: OSI Approved :: MIT License',
         'Environment :: Console',
