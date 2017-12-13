@@ -1,19 +1,27 @@
-# pyKwalify
+# pykwalifire
 
-YAML/JSON validation library
+**pykwalifire** is a fork of the YAML/JSON validation library [pykwalify](https://github.com/Grokzen/pykwalify).
+It adds the following features.
 
-This framework is a port with alot added functionality of the java version of the framework kwalify that can be found at: http://www.kuwata-lab.com/kwalify/
+## New features
 
-The original source code can be found at: http://sourceforge.net/projects/kwalify/files/kwalify-java/0.5.1/
+### Specify custom file extensions for YAML and JSON data files
 
-The source code of the latest release that has been used can be found at: https://github.com/sunaku/kwalify. Please note that source code is not the original authors code but a fork/upload of the last release available in ruby.
+In order to be able to validate JSON or YAML files with non-default file extensions, 
+the following two options have been introduced:
 
-The schema this library is base and extended from: http://www.kuwata-lab.com/kwalify/ruby/users-guide.01.html#schema
+- `-y EXT, --yaml-extension EXT` to specify a custom extension `EXT`, allowing to
+validate YAML files such as *my-yaml-file.yext*.
+- `-j EXT, --json-extension EXT` to specify a custom extension `EXT`, allowing to
+validate JSON files such as *my-json-file.jext*.
 
+## History
 
-# Usage
+[pykwalify](https://github.com/Grokzen/pykwalify).
 
-Create a data file. `Json` and `Yaml` formats are both supported.
+# Basic usage
+
+Create a data file. JSON and YAML formats are both supported.
 
 ```yaml
 - foo
@@ -28,78 +36,20 @@ sequence:
   - type: str
 ```
 
-Run validation from cli.
+Validate the file from the command line:
 
 ```bash
-pykwalify -d data.yaml -s schema.yaml
+pykwalifire -d data.yaml -s schema.yaml
 ```
 
-
-## Examples
-
-The documentation describes in detail how each keyword and type works and what is possible in each case.
-
-But there is a lot of real world examples that can be found in the test data/files. It shows alot of examples of how all keywords and types work in practise and in combination with eachother.
-
-The files can be found here and it shows both schema/data combinations that will work and that will fail.
-
- - `tests/files/success/`
- - `tests/files/fail/`
- - `tests/files/partial_schemas/`
-
-
-# PyYaml and ruamel.yaml
-
-`PyYaml` is the default installed yaml parser and `ruamel.yaml` is possible to install at the same time with the following command
+If the YAML data file would be called *data.customextension*, you would validate it
+with
 
 ```bash
-pip install 'pykwalify[ruamel]'
-
-# or for development:
-
-pip install -e '.[ruamel]'
+pykwalifire -d data.customextension -s schema.yaml -y customextension
 ```
 
-`ruamel.yaml` will however be used if both is installed becuase it is more up to date and includes the YAML 1.2 specification that `PyYaml` do not support.
 
-`PyYaml` will still be the default parser becuase it is used more and is still considered the default `YAML` parser in the python world.
+## Documentation
 
-Depending on how both libraries is developed, this can change in the future in any major update.
-
-
-
-## UTF-8 and data encoding
-
-If you have problems with unicode values not working properly when running pykwalify on python 2.7.x then try to add this environment variable to your execution
-
-```
-PYTHONIOENCODING=UTF-8 pykwalify ...
-```
-
-and it might help to force UTF-8 encoding on all string objects. If this do not work please open up a issue with your schema and data that can be used to track down the problem in the source code.
-
-
-# Project details
-
-|   |   |
-|---|---|
-| python support         | 2.7, 3.3, 3.4, 3.5, 3.6, 3.7 |
-| Source                 | https://github.com/Grokzen/pykwalify |
-| Docs (Latest release)  | http://pykwalify.readthedocs.io/en/master/ |
-| Docs (Unstable branch) | http://pykwalify.readthedocs.io/en/unstable/ |
-| Gitter (Free Chat)     | [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/Grokzen/pykwalify?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) |
-| Changelog              | https://github.com/Grokzen/pykwalify/blob/unstable/docs/release-notes.rst |
-| Upgrade instructions   | https://github.com/Grokzen/pykwalify/blob/unstable/docs/upgrade-instructions.rst |
-| Issues                 | https://github.com/Grokzen/pykwalify/issues |
-| Travis (master)        | [![Build Status](https://travis-ci.org/Grokzen/pykwalify.svg?branch=master)](https://travis-ci.org/Grokzen/pykwalify) https://travis-ci.org/Grokzen/pykwalify |
-| Travis (unstable)      | [![Build Status](https://travis-ci.org/Grokzen/pykwalify.svg?branch=unstable)](https://travis-ci.org/Grokzen/pykwalify) https://travis-ci.org/Grokzen/pykwalify |
-| Test coverage          | [![Coverage Status](https://coveralls.io/repos/Grokzen/pykwalify/badge.png?branch=master)](https://coveralls.io/r/Grokzen/pykwalify) https://coveralls.io/github/Grokzen/pykwalify |
-| pypi                   | https://pypi.python.org/pypi/pykwalify/ |
-| Open Hub               | https://www.openhub.net/p/pykwalify |
-| License                | `MIT` https://github.com/Grokzen/pykwalify/blob/unstable/docs/license.rst |
-| Copyright              | `Copyright (c) 2013-2017 Johan Andersson` |
-| git repo               | `git clone git@github.com:Grokzen/pykwalify.git` |
-| install stable         | `pip install pykwalify` |
-| install dev            | `$ git clone git@github.com:Grokzen/pykwalify.git pykwalify`<br>`$ cd ./pykwalify`<br>`$ virtualenv .venv`<br>`$ source .venv/bin/activate`<br>`$ pip install -r dev-requirements.txt`<br>`$ pip install -e .` |
-| required dependencies  | `docopt >= 0.6.2`<br> `python-dateutil >= 2.4.2` |
-| supported yml parsers  | `PyYaml >= 3.11`<br>`ruamel.yaml >= 0.11.0` |
+For further documentation, please see the [pykwalify documentation](http://pykwalify.readthedocs.io/en/master/).
