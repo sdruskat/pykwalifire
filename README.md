@@ -1,4 +1,6 @@
-# pykwalifire
+[![Build Status](https://travis-ci.org/sdruskat/pykwalifire.svg?branch=master)](https://travis-ci.org/sdruskat/pykwalifire) [![Coverage Status](https://coveralls.io/repos/github/sdruskat/pykwalifire/badge.svg?branch=master)](https://coveralls.io/github/sdruskat/pykwalifire?branch=master)
+
+# :snake: pykwalifire :fire:
 
 **pykwalifire** is a fork of the YAML/JSON validation library [pykwalify](https://github.com/Grokzen/pykwalify).
 It adds the following features.
