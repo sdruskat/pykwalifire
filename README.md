@@ -53,3 +53,16 @@ pykwalifire -d data.customextension -s schema.yaml -y customextension
 ## Documentation
 
 For further documentation, please see the [pykwalify documentation](http://pykwalify.readthedocs.io/en/master/).
+
+# License
+
+*pykwalifire* is licensed under the MIT license, cf. [license file](LICENSE.md).
+
+# `pykwalify` branch
+
+The [`pykwalify` branch](https://github.com/sdruskat/pykwalifire/tree/pykwalify)
+is used to create pull requests against the [upstream repository](https://github.com/Grokzen/pykwalify).
+Hopefully this way all work that's been done in *pykwalifire* can be contributed
+back to the original project.
+
+**Thanks @Grokzen for creating a great piece of open source software!**
