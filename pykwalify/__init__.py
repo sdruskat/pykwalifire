@@ -7,7 +7,7 @@ import logging
 import logging.config
 import os
 
-__author__ = 'Grokzen <Grokzen@gmail.com>'
+__author__ = 'Stephan Druskat <mail@sdruskat.net>'
 __version_info__ = (1, 6, 0)
 __version__ = '.'.join(map(str, __version_info__))
 
