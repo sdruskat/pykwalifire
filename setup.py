@@ -3,13 +3,14 @@ try:
 except ImportError:
     from distutils.core import setup
 
-with open('README.md') as f:
+with open('README.rst') as f:
     readme = f.read()
 
 setup(
     name="pykwalifire",
     version="1.7.0",
-    description='Python lib/cli for JSON/YAML schema validation',
+    description='Python lib/cli for JSON/YAML schema validation, fork '
+                'of pykwalify with added features',
     long_description=readme,
     author="Stephan Druskat",
     author_email="mail@sdruskat.net",
