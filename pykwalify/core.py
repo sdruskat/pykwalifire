@@ -209,10 +209,13 @@ class Core(object):
 
         # Look for schema; tags so they can be parsed before the root rule is parsed
         for k, v in self.schema.items():
+            # If key starts with "schema;"
             if k.startswith("schema;"):
                 log.debug(u"Found partial schema; : %s", v)
+                # Let r be a Rule with the schema;'s key'
                 r = Rule(schema=v)
                 log.debug(u" Partial schema : %s", r)
+                # Add the Rule to the partial schemas dict: schema-name: rule
                 pykwalify.partial_schemas[k.split(";", 1)[1]] = r
             else:
                 # readd all items that is not schema; so they can be parsed
@@ -545,11 +548,12 @@ class Core(object):
                         existing_schemas=", ".join(sorted(pykwalify.partial_schemas.keys()))))
                     return
 
-                include_rule = Rule()
-                include_rule.mapping = {k: partial_schema_rule}
-                include_rule.regex_mappings = []
+                # include_rule = Rule()
+                # include_rule.mapping = {k: partial_schema_rule}
+                # include_rule.regex_mappings = []
 
-                return self._validate(value, include_rule, u"{0}".format(path), done)
+                # return self._validate(value, include_rule, u"{0}".format(path), done)
+                rr = partial_schema_rule
 
             # Find out if this is a regex rule
             is_regex_rule = False
