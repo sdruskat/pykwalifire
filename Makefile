@@ -42,6 +42,8 @@ test:
 	coverage html
 
 sdist:
+	github_changelog_generator sdruskat/pykwalifire
+	pandoc CHANGELOG.md -o HISTORY.rst
 	pandoc README.md -o README.rst
 	python setup.py check -r -s
 	python setup.py sdist bdist_wheel
