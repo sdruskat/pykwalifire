@@ -44,6 +44,8 @@ test:
 sdist:
 	github_changelog_generator sdruskat/pykwalifire
 	pandoc -s README.md CHANGELOG.md -o README.rst
+	# Remove first 2 lines with icons in RST file
+	tail -n +3 "README.rst" > "README.tmp" && mv "README.tmp" "README.rst"
 	python setup.py check -r -s
 	python setup.py sdist bdist_wheel
 

@@ -8,7 +8,7 @@ with open('README.rst') as f:
 
 setup(
     name="pykwalifire",
-    version="1.7.1",
+    version="1.7.2",
     description='Python lib/cli for JSON/YAML schema validation, fork '
                 'of pykwalify with added features',
     long_description=readme,

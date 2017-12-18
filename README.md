@@ -78,3 +78,6 @@ Hopefully this way all work that's been done in *pykwalifire* can be contributed
 back to the original project.
 
 **Thanks @Grokzen for creating a great piece of open source software!**
+
+---
+
