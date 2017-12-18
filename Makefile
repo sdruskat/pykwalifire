@@ -42,6 +42,7 @@ test:
 	coverage html
 
 sdist:
+	printf "\n\n################\nSet new version and tag first and push before running this goal!\n#############\n\n"
 	github_changelog_generator sdruskat/pykwalifire
 	pandoc -s README.md CHANGELOG.md -o README.rst
 	# Remove first 2 lines with icons in RST file
