@@ -96,13 +96,21 @@ the original project.
 Change Log
 ==========
 
+`1.7.3 <https://github.com/sdruskat/pykwalifire/tree/1.7.3>`__ (2017-12-18)
+---------------------------------------------------------------------------
+
+`Full
+Changelog <https://github.com/sdruskat/pykwalifire/compare/1.7.2...1.7.3>`__
+
+.. section-1:
+
 `1.7.2 <https://github.com/sdruskat/pykwalifire/tree/1.7.2>`__ (2017-12-18)
 ---------------------------------------------------------------------------
 
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/1.7.1...1.7.2>`__
 
-.. section-1:
+.. section-2:
 
 `1.7.1 <https://github.com/sdruskat/pykwalifire/tree/1.7.1>`__ (2017-12-18)
 ---------------------------------------------------------------------------
@@ -110,7 +118,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/1.7.1...1.7.2>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/1.7.0...1.7.1>`__
 
-.. section-2:
+.. section-3:
 
 `1.7.0 <https://github.com/sdruskat/pykwalifire/tree/1.7.0>`__ (2017-12-13)
 ---------------------------------------------------------------------------
@@ -118,7 +126,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/1.7.0...1.7.1>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/1.6.0...1.7.0>`__
 
-.. section-3:
+.. section-4:
 
 `1.6.0 <https://github.com/sdruskat/pykwalifire/tree/1.6.0>`__ (2017-01-22)
 ---------------------------------------------------------------------------
@@ -126,7 +134,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/1.6.0...1.7.0>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/1.5.2...1.6.0>`__
 
-.. section-4:
+.. section-5:
 
 `1.5.2 <https://github.com/sdruskat/pykwalifire/tree/1.5.2>`__ (2016-11-12)
 ---------------------------------------------------------------------------
@@ -134,7 +142,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/1.5.2...1.6.0>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/1.5.1...1.5.2>`__
 
-.. section-5:
+.. section-6:
 
 `1.5.1 <https://github.com/sdruskat/pykwalifire/tree/1.5.1>`__ (2016-03-06)
 ---------------------------------------------------------------------------
@@ -142,7 +150,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/1.5.1...1.5.2>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/1.5.0...1.5.1>`__
 
-.. section-6:
+.. section-7:
 
 `1.5.0 <https://github.com/sdruskat/pykwalifire/tree/1.5.0>`__ (2015-09-30)
 ---------------------------------------------------------------------------
@@ -150,7 +158,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/1.5.0...1.5.1>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/1.4.1...1.5.0>`__
 
-.. section-7:
+.. section-8:
 
 `1.4.1 <https://github.com/sdruskat/pykwalifire/tree/1.4.1>`__ (2015-08-27)
 ---------------------------------------------------------------------------
@@ -158,7 +166,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/1.4.1...1.5.0>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/1.4.0...1.4.1>`__
 
-.. section-8:
+.. section-9:
 
 `1.4.0 <https://github.com/sdruskat/pykwalifire/tree/1.4.0>`__ (2015-08-04)
 ---------------------------------------------------------------------------
@@ -166,7 +174,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/1.4.0...1.4.1>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/1.3.0...1.4.0>`__
 
-.. section-9:
+.. section-10:
 
 `1.3.0 <https://github.com/sdruskat/pykwalifire/tree/1.3.0>`__ (2015-07-13)
 ---------------------------------------------------------------------------
@@ -174,7 +182,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/1.3.0...1.4.0>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/1.2.0...1.3.0>`__
 
-.. section-10:
+.. section-11:
 
 `1.2.0 <https://github.com/sdruskat/pykwalifire/tree/1.2.0>`__ (2015-05-19)
 ---------------------------------------------------------------------------
@@ -182,7 +190,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/1.2.0...1.3.0>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/1.1.0...1.2.0>`__
 
-.. section-11:
+.. section-12:
 
 `1.1.0 <https://github.com/sdruskat/pykwalifire/tree/1.1.0>`__ (2015-04-04)
 ---------------------------------------------------------------------------
@@ -190,7 +198,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/1.1.0...1.2.0>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/1.0.1...1.1.0>`__
 
-.. section-12:
+.. section-13:
 
 `1.0.1 <https://github.com/sdruskat/pykwalifire/tree/1.0.1>`__ (2015-03-08)
 ---------------------------------------------------------------------------
@@ -198,7 +206,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/1.0.1...1.1.0>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/1.0.0...1.0.1>`__
 
-.. section-13:
+.. section-14:
 
 `1.0.0 <https://github.com/sdruskat/pykwalifire/tree/1.0.0>`__ (2015-03-08)
 ---------------------------------------------------------------------------
@@ -206,7 +214,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/1.0.0...1.0.1>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/15.01...1.0.0>`__
 
-.. section-14:
+.. section-15:
 
 `15.01 <https://github.com/sdruskat/pykwalifire/tree/15.01>`__ (2015-01-17)
 ---------------------------------------------------------------------------
@@ -214,7 +222,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/15.01...1.0.0>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/14.12...15.01>`__
 
-.. section-15:
+.. section-16:
 
 `14.12 <https://github.com/sdruskat/pykwalifire/tree/14.12>`__ (2014-12-24)
 ---------------------------------------------------------------------------
@@ -222,7 +230,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/14.12...15.01>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/14.08...14.12>`__
 
-.. section-16:
+.. section-17:
 
 `14.08 <https://github.com/sdruskat/pykwalifire/tree/14.08>`__ (2014-08-24)
 ---------------------------------------------------------------------------
@@ -230,7 +238,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/14.08...14.12>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/14.06.1...14.08>`__
 
-.. section-17:
+.. section-18:
 
 `14.06.1 <https://github.com/sdruskat/pykwalifire/tree/14.06.1>`__ (2014-06-23)
 -------------------------------------------------------------------------------
@@ -238,7 +246,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/14.06.1...14.08>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/14.06...14.06.1>`__
 
-.. section-18:
+.. section-19:
 
 `14.06 <https://github.com/sdruskat/pykwalifire/tree/14.06>`__ (2014-06-07)
 ---------------------------------------------------------------------------
@@ -246,7 +254,7 @@ Changelog <https://github.com/sdruskat/pykwalifire/compare/14.06...14.06.1>`__
 `Full
 Changelog <https://github.com/sdruskat/pykwalifire/compare/0.1.2...14.06>`__
 
-.. section-19:
+.. section-20:
 
 `0.1.2 <https://github.com/sdruskat/pykwalifire/tree/0.1.2>`__ (2013-01-26)
 ---------------------------------------------------------------------------
