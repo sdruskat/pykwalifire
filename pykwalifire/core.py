@@ -14,15 +14,15 @@ import traceback
 import time
 
 # pyKwalify imports
-import pykwalify
-from pykwalify.compat import unicode, nativestr, basestring
-from pykwalify.errors import CoreError, SchemaError
-from pykwalify.errors import NotMappingError, NotSequenceError
-from pykwalify.rule import Rule
-from pykwalify.types import is_scalar, is_string, tt
+import pykwalifire
+from pykwalifire.compat import unicode, nativestr, basestring
+from pykwalifire.errors import CoreError, SchemaError
+from pykwalifire.errors import NotMappingError, NotSequenceError
+from pykwalifire.rule import Rule
+from pykwalifire.types import is_scalar, is_string, tt
 
 # 3rd party imports
-from pykwalify.compat import yaml
+from pykwalifire.compat import yaml
 from dateutil.parser import parse
 
 log = logging.getLogger(__name__)
@@ -35,7 +35,7 @@ class Core(object):
                  source_data=None, schema_data=None, extensions=None,
                  strict_rule_validation=False,
                  fix_ruby_style_regex=False, allow_assertions=False,
-                 custom_yaml_ext=None, custom_json_ext=None):
+                 yaml_extension=None, json_extension=None):
         """
         :param extensions:
             List of paths to python files that should be imported and available via 'func' keywork.
@@ -53,8 +53,8 @@ class Core(object):
         log.debug(u"source_data: %s", source_data)
         log.debug(u"schema_data: %s", schema_data)
         log.debug(u"extension files: %s", extensions)
-        log.debug(u"yaml extension: %s", custom_yaml_ext)
-        log.debug(u"json extension: %s", custom_json_ext)
+        log.debug(u"yaml extension: %s", yaml_extension)
+        log.debug(u"json extension: %s", json_extension)
 
         self.source = None
         self.schema = None
@@ -66,8 +66,8 @@ class Core(object):
         self.strict_rule_validation = strict_rule_validation
         self.fix_ruby_style_regex = fix_ruby_style_regex
         self.allow_assertions = allow_assertions
-        self.custom_yaml_ext = custom_yaml_ext
-        self.custom_json_ext = custom_json_ext
+        self.yaml_extension = yaml_extension
+        self.json_extension = json_extension
 
         if source_file is not None:
             if not os.path.exists(source_file):
@@ -76,8 +76,8 @@ class Core(object):
 
             with open(source_file, "r") as stream:
                 if source_file.endswith(".json") or \
-                        (self.custom_json_ext is not None and
-                         source_file.endswith(self.custom_json_ext)):
+                        (self.json_extension is not None and
+                         source_file.endswith(self.json_extension)):
                     try:
                         self.source = json.load(stream)
                     except Exception:
@@ -85,8 +85,8 @@ class Core(object):
                                         "source json file")
                 elif source_file.endswith(".yaml") or \
                         source_file.endswith('.yml') or \
-                        (self.custom_yaml_ext is not None and
-                         source_file.endswith(self.custom_yaml_ext)):
+                        (self.yaml_extension is not None and
+                         source_file.endswith(self.yaml_extension)):
                     try:
                         self.source = yaml.load(stream)
                     except Exception:
@@ -156,7 +156,7 @@ class Core(object):
 
     def _load_extensions(self):
         """
-        Load all extension files into the namespace pykwalify.ext
+        Load all extension files into the namespace pykwalifire.ext
         """
         log.debug(u"loading all extensions : %s", self.extensions)
 
@@ -216,7 +216,7 @@ class Core(object):
                 r = Rule(schema=v)
                 log.debug(u" Partial schema : %s", r)
                 # Add the Rule to the partial schemas dict: schema-name: rule
-                pykwalify.partial_schemas[k.split(";", 1)[1]] = r
+                pykwalifire.partial_schemas[k.split(";", 1)[1]] = r
             else:
                 # readd all items that is not schema; so they can be parsed
                 s[k] = v
@@ -302,14 +302,14 @@ class Core(object):
                 value=value.encode('unicode_escape')))
             return
         include_name = rule.include_name
-        partial_schema_rule = pykwalify.partial_schemas.get(include_name)
+        partial_schema_rule = pykwalifire.partial_schemas.get(include_name)
         if not partial_schema_rule:
             self.errors.append(SchemaError.SchemaErrorEntry(
                 msg=u"Cannot find partial schema with name '{include_name}'. Existing partial schemas: '{existing_schemas}'. Path: '{path}'",
                 path=path,
                 value=value,
                 include_name=include_name,
-                existing_schemas=", ".join(sorted(pykwalify.partial_schemas.keys()))))
+                existing_schemas=", ".join(sorted(pykwalifire.partial_schemas.keys()))))
             return
 
         self._validate(value, partial_schema_rule, path, done)
@@ -537,7 +537,7 @@ class Core(object):
             # Handle if the value of the key contains a include keyword
             if rr.include_name is not None:
                 include_name = rr.include_name
-                partial_schema_rule = pykwalify.partial_schemas.get(include_name)
+                partial_schema_rule = pykwalifire.partial_schemas.get(include_name)
 
                 if not partial_schema_rule:
                     self.errors.append(SchemaError.SchemaErrorEntry(
@@ -545,7 +545,7 @@ class Core(object):
                         path=path,
                         value=value,
                         include_name=include_name,
-                        existing_schemas=", ".join(sorted(pykwalify.partial_schemas.keys()))))
+                        existing_schemas=", ".join(sorted(pykwalifire.partial_schemas.keys()))))
                     return
 
                 # include_rule = Rule()

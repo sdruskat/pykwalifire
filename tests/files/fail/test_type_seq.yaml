@@ -1,6 +1,6 @@
 #
 # TODO: All of these failure tests currently raises a strange error that might not be the correct one and might require some redesign of the implementation.
-#       pykwalify.errors.NotSequenceError: <NotSequenceError: error code 7: Value: {} is not of a sequence type: Path: '/'>
+#       pykwalifire.errors.NotSequenceError: <NotSequenceError: error code 7: Value: {} is not of a sequence type: Path: '/'>
 #
 
 # ---

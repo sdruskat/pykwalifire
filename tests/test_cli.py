@@ -4,8 +4,8 @@
 import os
 import sys
 
-# pykwalify package imports
-from pykwalify import cli
+# pykwalifire package imports
+from pykwalifire import cli
 
 
 class TestCLI(object):
@@ -19,7 +19,7 @@ class TestCLI(object):
         schema_file = tmpdir.join("cli/1b.yaml")
 
         sys.argv = [
-            'scripts/pykwalify',
+            'scripts/pykwalifire',
             '-d', str(input),
             '-s', str(schema_file),
             '-v'
@@ -38,7 +38,7 @@ class TestCLI(object):
             assert k in cli_args
             assert cli_args[k] == expected[k]
 
-    def test_cli_custom_yaml_ext(self, tmpdir):
+    def test_cli_yaml_extension(self, tmpdir):
         """
         Test that when passing in certain arguments from commandline they
         are handled correctly by docopt and correct args structure is returned.
@@ -47,7 +47,7 @@ class TestCLI(object):
         schema_file = tmpdir.join("cli/1b.yaml")
 
         sys.argv = [
-            'scripts/pykwalify',
+            'scripts/pykwalifire',
             '-d', str(input),
             '-s', str(schema_file),
             '-y', 'yext',
@@ -82,7 +82,7 @@ class TestCLI(object):
         schema_file = self.f("cli/1b.yaml")
 
         sys.argv = [
-            'scripts/pykwalify',
+            'scripts/pykwalifire',
             '-d', str(input),
             '-s', str(schema_file),
         ]

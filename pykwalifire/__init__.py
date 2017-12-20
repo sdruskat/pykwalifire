@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-""" pykwalify """
+""" pykwalifire """
 
 # python stdlib
 import logging
@@ -8,7 +8,7 @@ import logging.config
 import os
 
 __author__ = 'Stephan Druskat <mail@sdruskat.net>'
-__version_info__ = (1, 7, 3)
+__version_info__ = (2, 0, 1)
 __version__ = '.'.join(map(str, __version_info__))
 
 

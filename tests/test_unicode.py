@@ -5,21 +5,21 @@
 # python std lib
 import os
 
-# pykwalify imports
-import pykwalify
-from pykwalify.compat import unicode
-from pykwalify.core import Core
-from pykwalify.errors import SchemaError
+# pykwalifire imports
+import pykwalifire
+from pykwalifire.compat import unicode
+from pykwalifire.core import Core
+from pykwalifire.errors import SchemaError
 
 # 3rd party imports
-from pykwalify.compat import yaml
+from pykwalifire.compat import yaml
 from testfixtures import compare
 
 
 class TestUnicode(object):
 
     def setUp(self):
-        pykwalify.partial_schemas = {}
+        pykwalifire.partial_schemas = {}
 
     def f(self, *args):
         if os.path.isabs(args[0]):

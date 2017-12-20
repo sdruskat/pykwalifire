@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-# pykwalify imports
-from pykwalify import errors
+# pykwalifire imports
+from pykwalifire import errors
 
 
 class TestCLI(object):

@@ -3,7 +3,7 @@
 """ pyKwalify - errors.py """
 
 # python stdlib
-from pykwalify.compat import basestring
+from pykwalifire.compat import basestring
 
 retcodes = {
     # PyKwalifyExit

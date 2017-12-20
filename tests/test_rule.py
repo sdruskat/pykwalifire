@@ -9,15 +9,15 @@ import unittest
 import pytest
 
 # pyKwalify imports
-import pykwalify
-from pykwalify.errors import RuleError, SchemaConflict
-from pykwalify.rule import Rule
+import pykwalifire
+from pykwalifire.errors import RuleError, SchemaConflict
+from pykwalifire.rule import Rule
 
 
 class TestRule(unittest.TestCase):
 
     def setUp(self):
-        pykwalify.partial_schemas = {}
+        pykwalifire.partial_schemas = {}
 
     def test_schema(self):
         # Test that when using both schema; and include tag that it throw an error because schema; tags should be parsed via Core()

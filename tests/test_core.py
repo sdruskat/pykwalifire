@@ -5,21 +5,21 @@
 # python std lib
 import os
 
-# pykwalify imports
-import pykwalify
-from pykwalify.core import Core
-from pykwalify.errors import SchemaError, CoreError
+# pykwalifire imports
+import pykwalifire
+from pykwalifire.core import Core
+from pykwalifire.errors import SchemaError, CoreError
 
 # 3rd party imports
 import pytest
-from pykwalify.compat import yaml
+from pykwalifire.compat import yaml
 from testfixtures import compare
 
 
 class TestCore(object):
 
     def setUp(self):
-        pykwalify.partial_schemas = {}
+        pykwalifire.partial_schemas = {}
 
     def f(self, *args):
         return os.path.join(os.path.dirname(os.path.realpath(__file__)), "files", *args)
@@ -121,7 +121,7 @@ class TestCore(object):
         schema_f.write("type: float")
 
         Core(source_file=str(source_f), schema_files=[str(schema_f)],
-             custom_yaml_ext='yext')
+             yaml_extension='yext')
 
     def test_load_custom_json_format(self, tmpdir):
         """
@@ -134,7 +134,7 @@ class TestCore(object):
         schema_f.write('{"type": "float"}')
 
         Core(source_file=str(source_f), schema_files=[str(schema_f)],
-             custom_json_ext='jext')
+             json_extension='jext')
 
     def test_load_empty_json_file(self, tmpdir):
         """
@@ -203,7 +203,7 @@ class TestCore(object):
         ]
 
         # TODO: Fix this issue...
-        # assert ('pykwalify.core', 'ERROR', 'Errors found but will not raise exception...') in l.actual()
+        # assert ('pykwalifire.core', 'ERROR', 'Errors found but will not raise exception...') in l.actual()
 
     def test_core_data_mode(self):
         Core(source_data=3.14159, schema_data={"type": "number"}).validate()

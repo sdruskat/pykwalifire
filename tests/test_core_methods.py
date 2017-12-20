@@ -2,10 +2,10 @@
 import pytest
 from datetime import datetime
 
-from pykwalify.compat import unicode
-from pykwalify.core import Core
-# from pykwalify.errors import NotSequenceError, CoreError
-from pykwalify.errors import CoreError
+from pykwalifire.compat import unicode
+from pykwalifire.core import Core
+# from pykwalifire.errors import NotSequenceError, CoreError
+from pykwalifire.errors import CoreError
 
 
 class Rule(object):

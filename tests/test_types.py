@@ -5,8 +5,8 @@
 # python std lib
 import unittest
 
-# pykwalify imports
-from pykwalify import types
+# pykwalifire imports
+from pykwalifire import types
 
 
 class TestTypes(unittest.TestCase):

@@ -23,7 +23,7 @@ cleancov:
 	-rm -rf htmlcov/
 
 cleanegg:
-	-rm -rf pykwalify.egg-info/
+	-rm -rf pykwalifire.egg-info/
 
 cleanpy:
 	-find . -type f -name "*~" -exec rm -f "{}" \;
@@ -37,7 +37,7 @@ cleanall: clean cleanegg cleanpy cleancov
 
 test:
 	coverage erase
-	coverage run --source pykwalify/ -m pytest
+	coverage run --source pykwalifire/ -m pytest
 	coverage report
 	coverage html
 

@@ -57,12 +57,12 @@ Options:
   --version                            Display the version number and exit
 """
 
-    # Import pykwalify package
-    import pykwalify
+    # Import pykwalifire package
+    import pykwalifire
 
-    args = docopt(__docopt__, version=pykwalify.__version__)
+    args = docopt(__docopt__, version=pykwalifire.__version__)
 
-    pykwalify.init_logging(1 if args["--quiet"] else args["--verbose"])
+    pykwalifire.init_logging(1 if args["--quiet"] else args["--verbose"])
     log = logging.getLogger(__name__)
 
     #
@@ -90,8 +90,8 @@ def run(cli_args):
         strict_rule_validation=cli_args['--strict-rule-validation'],
         fix_ruby_style_regex=cli_args['--fix-ruby-style-regex'],
         allow_assertions=cli_args['--allow-assertions'],
-        custom_yaml_ext=cli_args['--yaml-extension'],
-        custom_json_ext=cli_args['--json-extension'],
+        yaml_extension=cli_args['--yaml-extension'],
+        json_extension=cli_args['--json-extension'],
     )
     c.validate()
     return c

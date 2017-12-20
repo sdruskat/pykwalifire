@@ -4,7 +4,7 @@
 
 # python stdlib
 import datetime
-from pykwalify.compat import basestring, bytes
+from pykwalifire.compat import basestring, bytes
 
 DEFAULT_TYPE = "str"
 

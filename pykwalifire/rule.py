@@ -6,10 +6,10 @@
 import logging
 import re
 
-# pykwalify imports
-from pykwalify.compat import basestring
-from pykwalify.errors import SchemaConflict, RuleError
-from pykwalify.types import (
+# pykwalifire imports
+from pykwalifire.compat import basestring
+from pykwalifire.errors import SchemaConflict, RuleError
+from pykwalifire.types import (
     DEFAULT_TYPE,
     is_bool,
     is_builtin_type,

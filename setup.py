@@ -8,7 +8,7 @@ with open('README.rst') as f:
 
 setup(
     name="pykwalifire",
-    version="1.7.3",
+    version="2.0.1",
     description='Python lib/cli for JSON/YAML schema validation, fork '
                 'of pykwalify with added features',
     long_description=readme,
@@ -17,14 +17,14 @@ setup(
     maintainer='Stephan Druskat',
     maintainer_email='mail@sdruskat.net',
     license='MIT',
-    packages=['pykwalify'],
+    packages=['pykwalifire'],
     url='http://github.com/sdruskat/pykwalifire',
     extras_require={
         'ruamel': ["ruamel.yaml>=0.11.0,<0.12.0"],
     },
     entry_points={
         'console_scripts': [
-            'pykwalifire = pykwalify.cli:cli_entrypoint',
+            'pykwalifire = pykwalifire.cli:cli_entrypoint',
         ],
     },
     install_requires=[
