@@ -19,15 +19,13 @@ setup(
     license='MIT',
     packages=['pykwalifire'],
     url='http://github.com/sdruskat/pykwalifire',
-    extras_require={
-        'ruamel': ["ruamel.yaml>=0.11.0,<0.12.0"],
-    },
     entry_points={
         'console_scripts': [
             'pykwalifire = pykwalifire.cli:cli_entrypoint',
         ],
     },
     install_requires=[
+        'ruamel.yaml>=0.11.0,<0.12.0',
         'docopt>=0.6.2',
         'PyYAML>=3.11',
         'python-dateutil>=2.4.2',
@@ -47,7 +45,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Environment :: Console',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',

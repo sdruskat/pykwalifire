@@ -17,6 +17,17 @@ validate YAML files such as *my-yaml-file.yext*.
 - `-j EXT, --json-extension EXT` to specify a custom extension `EXT`, allowing to
 validate JSON files such as *my-json-file.jext*.
 
+### Support Python 3.x exclusively
+
+*pykwalifire* drops support for Python 2.7. Python 2.x will not be maintained
+past 2020, and its default `ascii` encoding makes it a nightmare for unicode
+support. To be able to use *pykwalifire* you must use it with Python 3.
+
+### Default `ruamel` YAML parser
+
+As *PyYAML*, the most widely used YAML parser in the Python world, does not
+support YAML 1.2, *ruamel.yaml* is the default parser for *pykwalifire*.
+
 ## History
 
 Cf. [pykwalify](https://github.com/Grokzen/pykwalify).
