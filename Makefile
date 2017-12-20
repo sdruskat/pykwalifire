@@ -31,9 +31,9 @@ cleanpy:
 	-find . -type f -name "*.rej" -exec rm -f "{}" \;
 	-find . -type f -name "*.pyc" -exec rm -f "{}" \;
 	-find . -type f -name "*.parse-index" -exec rm -f "{}" \;
-	-if [ -d "__pycache__" ]; then rm -rf "__pycache__"; fi;
+	-find . -type d -name "__pycache__" -print0 | xargs -0 rm -rf "{}"\;
 
-cleanall: clean cleanegg cleanpy cleancov
+cleanall: clean cleanegg cleanpy cleancov cleantox
 
 test:
 	coverage erase
